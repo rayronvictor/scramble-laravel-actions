@@ -1,0 +1,50 @@
+{
+    "name": "rayronvictor/scramble-laravel-actions",
+    "description": "Scramble (dedoc/scramble) support for Laravel Actions (lorisleiva/laravel-actions): document actions used as controllers in your OpenAPI docs.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "scramble", "openapi", "laravel-actions", "api-documentation"],
+    "authors": [
+        {
+            "name": "Rayron Victor",
+            "email": "rayronvictor@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "dedoc/scramble": "^0.13.44",
+        "lorisleiva/laravel-actions": "^2.8"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "pestphp/pest": "^2.34|^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RayronVictor\\ScrambleLaravelActions\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RayronVictor\\ScrambleLaravelActions\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RayronVictor\\ScrambleLaravelActions\\ScrambleLaravelActionsServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
